@@ -1,6 +1,3 @@
-git init
-git add .
-git commit -m "Primeiro commit do bot"
-git branch -M main
-git remote add origin https://github.com/Almeida59/clinic.in.git
-git push -u origin main
+git add clinicin.py
+git commit -m "Ajuste para deploy no Railway"
+git push origin main
