@@ -3,8 +3,7 @@ import telebot
 import os
 
 # Configurações principais
-TELEGRAM_TOKEN = "7567604688:AAECILv30v6FhA2W-Z-8uG98V32lmybmSVg"
-
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "SEU_TOKEN_AQUI")  # Use variável de ambiente para maior segurança
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
 # Inicializa o app Flask
@@ -59,4 +58,5 @@ def webhook():
 
 # Inicialização do app Flask
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    port = int(os.environ.get("PORT", 5000))  # Configuração da porta para o Railway
+    app.run(debug=True, host="0.0.0.0", port=port)
