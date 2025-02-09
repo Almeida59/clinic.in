@@ -1,0 +1,1 @@
+web: gunicorn clinicin:app
