@@ -58,5 +58,7 @@ def webhook():
 
 # Inicialização do app Flask
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # Configuração da porta para o Railway
-    app.run(debug=True, host="0.0.0.0", port=port)
+ # Configuração da porta para o Railway  
+port = int(os.environ.get("PORT", 5000))
+app.run(debug=False, host="0.0.0.0", port=port)
+
